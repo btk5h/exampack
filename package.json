@@ -1,0 +1,43 @@
+{
+  "name": "exampack",
+  "version": "0.1.0",
+  "description": "A toolchain for authoring printable exams with code",
+  "main": "dist/cli.js",
+  "repository": "https://github.com/btk5h/exampack",
+  "author": "Bryan Terce <bryan.terce@gmail.com>",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "exampack": "bin/cli.js"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -cw",
+    "prepublishOnly": "rollup -c"
+  },
+  "files": [
+    "bin",
+    "dist",
+    "assets"
+  ],
+  "exports": {
+    "./package.json": "./package.json"
+  },
+  "dependencies": {
+    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.30",
+    "chokidar": "^3.5.2",
+    "express": "^4.17.1",
+    "fs-extra": "^10.0.0",
+    "mdsvex": "^0.9.8",
+    "pagedjs": "^0.2.0",
+    "sade": "^1.7.4",
+    "svelte": "^3.44.1",
+    "vite": "^2.6.13"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^21.0.1",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^13.0.6",
+    "rollup": "^2.59.0"
+  }
+}
